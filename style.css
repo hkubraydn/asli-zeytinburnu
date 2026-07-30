@@ -553,3 +553,108 @@ footer { background: var(--text-dark); color: var(--white); padding: 20px 0; fon
     transform: translateY(-5px);
   }
 }
+
+/* --- Alerjen Sembolleri ve Bilgilendirme Kartı Stilleri --- */
+.allergen-legend-container {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 20px 25px;
+  box-shadow: var(--shadow);
+  margin-bottom: 30px;
+  border-left: 4px solid var(--accent);
+  max-width: 100%;
+}
+.allergen-legend-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.allergen-legend-title i {
+  color: var(--accent);
+}
+.allergen-legend-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 15px;
+}
+.allergen-legend-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.allergen-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  background: var(--bg-light);
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(92, 44, 22, 0.1);
+}
+
+/* Alerjen Rozetleri Ortak Stili */
+.allergen-badge-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: var(--white);
+  border: none;
+}
+
+/* Alerjen Grupları Renkleri */
+.allergen-badge-icon.gluten { background-color: #df9a57; }   /* Wheat color */
+.allergen-badge-icon.sut { background-color: #4299e1; }    /* Milk blue */
+.allergen-badge-icon.yumurta { background-color: #ecc94b; color: #2c221e; }      /* Egg yolk yellow */
+.allergen-badge-icon.kuruyemis { background-color: #48bb78; }     /* Seed green */
+.allergen-badge-icon.balik { background-color: #319795; }     /* Water teal */
+.allergen-badge-icon.susam { background-color: #a0aec0; }   /* Sesame gray-brown */
+
+/* Ürün Kartı Alerjen Bindirmesi */
+.menu-card {
+  position: relative; /* Badge konumlandırma için gerekli */
+}
+.card-allergens {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px; /* space between allergens and title */
+}
+.card-allergens .allergen-badge-icon {
+  width: 18px;
+  height: 18px;
+  font-size: 0.6rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: help;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.card-allergens .allergen-badge-icon:hover {
+  transform: scale(1.2);
+}
+.kcal-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background-color: rgba(92, 44, 22, 0.06);
+  padding: 2px 8px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.kcal-badge i {
+  color: var(--accent);
+  font-size: 0.7rem;
+}
