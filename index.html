@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aslı Lezzetleri - Zeytinburnu</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Üst Bilgi Barı -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <span><i class="fa-solid fa-location-dot"></i> Gökalp, 58. Bulvar Cd. No:42, Zeytinburnu/İstanbul</span>
+      <span id="status-badge" class="badge">Yükleniyor...</span>
+    </div>
+  </div>
+
+  <!-- Navigasyon -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo">
+        <!-- Şef Şapkası Simgesi -->
+        <svg class="logo-icon" viewBox="0 0 100 60" fill="#f1ab18" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M50 5 C40 5, 35 15, 30 18 C22 15, 12 25, 18 35 C12 42, 20 52, 32 50 L68 50 C80 52, 88 42, 82 35 C88 25, 78 15, 70 18 C65 15, 60 5, 50 5 Z" />
+          <rect x="32" y="53" width="36" height="7" rx="2" fill="#f1ab18" />
+        </svg>
+
+        <div class="logo-text-group">
+          <span class="logo-brand">Aslı</span>
+          <span class="logo-branch">ZEYTİNBURNU</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#hero">Ana Sayfa</a></li>
+        <li><a href="#menu">Menü</a></li>
+        <li><a href="#about">Hakkımızda</a></li>
+        <li><a href="#contact">İletişim</a></li>
+      </ul>
+      <button class="cart-btn" onclick="toggleCart()">
+        <i class="fa-solid fa-basket-shopping"></i>
+        <span id="cart-count">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Bölümü (Kaydırmalı Slider) -->
+  <section id="hero" class="hero-slider">
+    <div class="slider-container">
+      <!-- Slayt 1: Geleneksel Lezzetler -->
+      <div class="slide active"
+        style="background-image: url('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1600&q=80');">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <h1>Geleneksel Lezzetler,<br>Unutulmaz Anlar</h1>
+          <p>Zeytinburnu'nun kalbinde taze börekler, enfes tatlılar ve sıcacık çay eşliğinde keyifli bir mola verin.</p>
+          <div class="hero-buttons">
+            <a href="#menu" class="btn btn-primary">Menüyü İncele</a>
+            <a href="#contact" class="btn btn-outline">Konum & İletişim</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slayt 2: El Açması Börekler -->
+      <div class="slide"
+        style="background-image: url('https://images.unsplash.com/photo-1608686207856-001b95cf60ca?auto=format&fit=crop&w=1600&q=80');">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <h1>Çıtır Çıtır, Taptaze<br>El Açması Börekler</h1>
+          <p>Özenle seçilmiş peynirler, nefis kıyma ve incecik açılmış yufkayla hazırlanan meşhur böreklerimizi
+            denediniz mi?</p>
+          <div class="hero-buttons">
+            <a href="#menu" class="btn btn-primary" onclick="selectHeroCategory('borek')">Börekleri Gör</a>
+            <a href="#" class="btn btn-outline" onclick="showCustomAlert('Garsonla iletişime geçiniz.'); return false;">Sipariş Ver</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slayt 3: Kahve ve Tatlı -->
+      <div class="slide"
+        style="background-image: url('https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=1600&q=80');">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <h1>Günün En Tatlı Anı<br>Kahve & Tatlı Keyfi</h1>
+          <p>Taze çekilmiş aromatik kahvelerimiz ve günlük hazırlanan enfes tatlı çeşitlerimizle kendinizi ödüllendirin.
+          </p>
+          <div class="hero-buttons">
+            <a href="#menu" class="btn btn-primary" onclick="selectHeroCategory('tatli')">Tatlıları İncele</a>
+            <a href="#about" class="btn btn-outline">Hakkımızda</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slider Okları -->
+    <button class="slider-arrow prev" onclick="moveSlide(-1)" aria-label="Önceki Slayt">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button class="slider-arrow next" onclick="moveSlide(1)" aria-label="Sonraki Slayt">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <!-- Slider Noktaları -->
+    <div class="slider-dots">
+      <span class="dot active" onclick="currentSlide(0)"></span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+  </section>
+
+
+  <!-- Menü Bölümü -->
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Zengin Menümüz</h2>
+        <p>En kaliteli malzemelerle günlük olarak hazırlanan lezzetlerimiz</p>
+      </div>
+
+      <!-- Arama ve Filtreler -->
+      <div class="menu-controls">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="menu-search" placeholder="Lezzet ara (örn: Su Böreği, Baklava...)"
+            onkeyup="filterMenu()">
+        </div>
+        <div class="category-tabs" id="category-tabs">
+          <button class="tab-btn active" onclick="filterCategory('all', this)">Tümü</button>
+          <button class="tab-btn" onclick="filterCategory('kahvalti', this)">Kahvaltı & Yumurta</button>
+          <button class="tab-btn" onclick="filterCategory('borek', this)">Börek & Tost</button>
+          <button class="tab-btn" onclick="filterCategory('atistirmalik', this)">Sandviç & Salata</button>
+          <button class="tab-btn" onclick="filterCategory('ana-yemek', this)">Ana Yemek & Pasta</button>
+          <button class="tab-btn" onclick="filterCategory('tatli', this)">Tatlılar</button>
+          <button class="tab-btn" onclick="filterCategory('icecek', this)">İçecekler</button>
+        </div>
+      </div>
+
+      <!-- Ürün Kartları -->
+      <div class="menu-grid" id="menu-grid">
+        <!-- JavaScript ile dinamik dolacak -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Hakkımızda Bölümü -->
+  <section id="about" class="about-section">
+    <div class="container about-grid">
+      <div class="about-text">
+        <h2>Yılların Değişmeyen Lezzet Durağı</h2>
+        <p>Aslı Lezzetleri olarak Zeytinburnu şubemizde, geleneksel tariflerimizi modern sunumlarla buluşturuyoruz.
+          Günün her saatinde taze çıkan ürünlerimiz ve güler yüzlü hizmetimizle sizleri ağırlamaktan mutluluk duyuyoruz.
+        </p>
+        <div class="features">
+          <div class="feature-item">
+            <i class="fa-solid fa-wheat-awn"></i>
+            <span>Günlük & Taze Üretim</span>
+          </div>
+          <div class="feature-item">
+            <i class="fa-solid fa-heart"></i>
+            <span>Özenli Hazırlık</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- İletişim ve Harita -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>İletişim & Konum</h2>
+        <p>Bizi ziyaret edin veya siparişinizi doğrudan verin</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="info-card">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <div>
+              <h4>Adres</h4>
+              <p>Nuripaşa Mh, 58. Bulvar Cd. No:42, 34020 Zeytinburnu/İstanbul</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <h4>Çalışma Saatleri</h4>
+              <p>Haftanın Her Günü: 07:00 - 23:00</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <h4>Telefon / Sipariş</h4>
+              <p><a href="tel:02120000000">(0212) 415 86 86</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Maps iframe -->
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.642954876229!2d28.9015112!3d40.989321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cabb70477730a1%3A0x27f0dc0dc338c095!2sAsl%C4%B1%20Zeytinburnu!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sepet Yan Paneli -->
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3>Sipariş Özetiniz</h3>
+      <button class="close-btn" onclick="toggleCart()">&times;</button>
+    </div>
+    <div class="cart-body" id="cart-items">
+      <p class="empty-msg">Sepetiniz henüz boş.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="total-price">
+        <span>Toplam:</span>
+        <strong id="cart-total">0 ₺</strong>
+      </div>
+      <button class="btn btn-primary btn-block" onclick="checkout()">Siparişi Tamamla</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <p>&copy; 2026 Aslı Lezzetleri Zeytinburnu. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <!-- Özel Uyarı Modalı -->
+  <div id="custom-alert-modal" class="custom-modal">
+    <div class="custom-modal-content">
+      <div id="custom-modal-icon-container" class="custom-modal-icon">
+        <i class="fa-solid fa-bell-concierge"></i>
+      </div>
+      <h2>Bilgi</h2>
+      <p id="custom-alert-message">Garsonla iletişime geçiniz.</p>
+      <button class="btn btn-primary" onclick="closeCustomAlert()">Tamam</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
