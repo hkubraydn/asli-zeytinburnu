@@ -126,6 +126,35 @@
         <p>En kaliteli malzemelerle günlük olarak hazırlanan lezzetlerimiz</p>
       </div>
 
+      <!-- Arama ve Filtreler -->
+      <div class="menu-controls">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="menu-search" placeholder="Lezzet ara (örn: Su Böreği, Baklava...)"
+            onkeyup="filterMenu()">
+        </div>
+        <div class="category-tabs" id="category-tabs">
+          <button class="tab-btn active" onclick="filterCategory('all', this)"><i class="fa-solid fa-list"></i>
+            Tümü</button>
+          <button class="tab-btn" onclick="filterCategory('kahvalti', this)"><i class="fa-solid fa-egg"></i> Kahvaltı &
+            Yumurta</button>
+          <button class="tab-btn" onclick="filterCategory('borek', this)"><i class="fa-solid fa-bread-slice"></i> Börek
+            & Tost</button>
+          <button class="tab-btn" onclick="filterCategory('atistirmalik', this)"><i class="fa-solid fa-leaf"></i>
+            Sandviç & Salata</button>
+          <button class="tab-btn" onclick="filterCategory('ana-yemek', this)"><i class="fa-solid fa-utensils"></i> Ana
+            Yemek & Pasta</button>
+          <button class="tab-btn" onclick="filterCategory('tatli', this)"><i class="fa-solid fa-cookie-bite"></i>
+            Tatlılar</button>
+          <button class="tab-btn" onclick="filterCategory('sicak-icecek', this)"><i class="fa-solid fa-mug-hot"></i>
+            Sıcak İçecekler</button>
+          <button class="tab-btn" onclick="filterCategory('soguk-icecek', this)"><i class="fa-solid fa-snowflake"></i>
+            Soğuk İçecekler</button>
+          <button class="tab-btn" onclick="filterCategory('soft-icecek', this)"><i class="fa-solid fa-glass-water"></i>
+            Soft İçecekler</button>
+        </div>
+      </div>
+
       <!-- Alerjen Bilgilendirmesi -->
       <div class="allergen-legend-container">
         <div class="allergen-legend-list">
@@ -153,24 +182,6 @@
             <span class="allergen-badge-icon susam"><i class="fa-solid fa-circle-nodes"></i></span>
             <span class="allergen-name">Susam</span>
           </div>
-        </div>
-      </div>
-
-      <!-- Arama ve Filtreler -->
-      <div class="menu-controls">
-        <div class="search-box">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" id="menu-search" placeholder="Lezzet ara (örn: Su Böreği, Baklava...)"
-            onkeyup="filterMenu()">
-        </div>
-        <div class="category-tabs" id="category-tabs">
-          <button class="tab-btn active" onclick="filterCategory('all', this)">Tümü</button>
-          <button class="tab-btn" onclick="filterCategory('kahvalti', this)">Kahvaltı & Yumurta</button>
-          <button class="tab-btn" onclick="filterCategory('borek', this)">Börek & Tost</button>
-          <button class="tab-btn" onclick="filterCategory('atistirmalik', this)">Sandviç & Salata</button>
-          <button class="tab-btn" onclick="filterCategory('ana-yemek', this)">Ana Yemek & Pasta</button>
-          <button class="tab-btn" onclick="filterCategory('tatli', this)">Tatlılar</button>
-          <button class="tab-btn" onclick="filterCategory('icecek', this)">İçecekler</button>
         </div>
       </div>
 
@@ -217,14 +228,14 @@
             <i class="fa-solid fa-map-location-dot"></i>
             <div>
               <h4>Adres</h4>
-              <p>Nuripaşa Mh, 58. Bulvar Cd. No:42, 34020 Zeytinburnu/İstanbul</p>
+              <p>Nuripaşa Mh, 58. Bulvar Cd. No:152/C, 34020 Zeytinburnu/İstanbul</p>
             </div>
           </div>
           <div class="info-card">
             <i class="fa-solid fa-clock"></i>
             <div>
               <h4>Çalışma Saatleri</h4>
-              <p>Haftanın Her Günü: 07:00 - 23:00</p>
+              <p>Haftanın Her Günü: 07:00 - 00:00</p>
             </div>
           </div>
           <div class="info-card">

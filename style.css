@@ -1,9 +1,14 @@
 :root {
-  --primary: #5c2c16;      /* Sıcak Kahve */
-  --accent: #d97724;       /* Sıcak Amber / Karamel */
-  --bg-light: #faf6f0;     /* Krem Arka Plan */
-  --text-dark: #2c221e;    /* Koyu Metin */
-  --text-muted: #70625a;  /* İkincil Metin */
+  --primary: #5c2c16;
+  /* Sıcak Kahve */
+  --accent: #d97724;
+  /* Sıcak Amber / Karamel */
+  --bg-light: #faf6f0;
+  /* Krem Arka Plan */
+  --text-dark: #2c221e;
+  /* Koyu Metin */
+  --text-muted: #70625a;
+  /* İkincil Metin */
   --white: #ffffff;
   --shadow: 0 4px 20px rgba(92, 44, 22, 0.08);
   --radius: 12px;
@@ -22,7 +27,10 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, h3, .logo {
+h1,
+h2,
+h3,
+.logo {
   font-family: 'Playfair Display', serif;
 }
 
@@ -39,18 +47,28 @@ h1, h2, h3, .logo {
   font-size: 0.85rem;
   padding: 8px 0;
 }
+
 .top-bar-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .badge {
   padding: 3px 10px;
   border-radius: 20px;
   font-weight: 600;
 }
-.badge.open { background: #2e7d32; color: #fff; }
-.badge.closed { background: #c62828; color: #fff; }
+
+.badge.open {
+  background: #2e7d32;
+  color: #fff;
+}
+
+.badge.closed {
+  background: #c62828;
+  color: #fff;
+}
 
 /* Logo Stilleri */
 .brand-logo {
@@ -75,7 +93,8 @@ h1, h2, h3, .logo {
   font-family: 'Caveat', cursive;
   font-size: 2.4rem;
   font-weight: 700;
-  color: #f1ab18; /* Logodaki sarı/altın tonu */
+  color: #f1ab18;
+  /* Logodaki sarı/altın tonu */
   letter-spacing: 1px;
 }
 
@@ -83,10 +102,12 @@ h1, h2, h3, .logo {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.65rem;
   font-weight: 700;
-  color: #5c2c16; /* Kahve tonu */
+  color: #5c2c16;
+  /* Kahve tonu */
   letter-spacing: 3.5px;
   margin-top: -4px;
 }
+
 /* Navbar */
 .navbar {
   background: var(--white);
@@ -95,31 +116,41 @@ h1, h2, h3, .logo {
   top: 0;
   z-index: 100;
 }
+
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 70px;
 }
+
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--primary);
   text-decoration: none;
 }
-.logo span { color: var(--accent); }
+
+.logo span {
+  color: var(--accent);
+}
+
 .nav-links {
   display: flex;
   list-style: none;
   gap: 25px;
 }
+
 .nav-links a {
   text-decoration: none;
   color: var(--text-dark);
   font-weight: 500;
   transition: color 0.2s;
 }
-.nav-links a:hover { color: var(--accent); }
+
+.nav-links a:hover {
+  color: var(--accent);
+}
 
 .cart-btn {
   background: var(--primary);
@@ -142,11 +173,13 @@ h1, h2, h3, .logo {
   color: var(--white);
   background-color: var(--text-dark);
 }
+
 .slider-container {
   position: relative;
   width: 100%;
   height: 100%;
 }
+
 .slide {
   position: absolute;
   top: 0;
@@ -163,17 +196,20 @@ h1, h2, h3, .logo {
   transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
   z-index: 1;
 }
+
 .slide.active {
   opacity: 1;
   visibility: visible;
   z-index: 2;
 }
+
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(44, 34, 30, 0.75) 0%, rgba(44, 34, 30, 0.5) 100%);
   z-index: 1;
 }
+
 .hero-content {
   position: relative;
   z-index: 2;
@@ -182,22 +218,29 @@ h1, h2, h3, .logo {
   opacity: 0;
   transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease-in-out;
 }
+
 .slide.active .hero-content {
   transform: translateY(0);
   opacity: 1;
   transition-delay: 0.2s;
 }
+
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 15px;
   line-height: 1.2;
 }
+
 .hero-content p {
   font-size: 1.1rem;
   margin-bottom: 25px;
   opacity: 0.9;
 }
-.hero-buttons { display: flex; gap: 15px; }
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
 
 /* Slider Okları */
 .slider-arrow {
@@ -220,14 +263,17 @@ h1, h2, h3, .logo {
   transition: all 0.3s ease;
   font-size: 1.2rem;
 }
+
 .slider-arrow:hover {
   background: var(--accent);
   border-color: var(--accent);
   transform: translateY(-50%) scale(1.08);
 }
+
 .slider-arrow.prev {
   left: 30px;
 }
+
 .slider-arrow.next {
   right: 30px;
 }
@@ -242,6 +288,7 @@ h1, h2, h3, .logo {
   gap: 10px;
   z-index: 10;
 }
+
 .slider-dots .dot {
   width: 10px;
   height: 10px;
@@ -250,9 +297,11 @@ h1, h2, h3, .logo {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 .slider-dots .dot:hover {
   background: rgba(255, 255, 255, 0.8);
 }
+
 .slider-dots .dot.active {
   background: var(--accent);
   width: 25px;
@@ -270,20 +319,49 @@ h1, h2, h3, .logo {
   border: none;
   transition: all 0.2s;
 }
-.btn-primary { background: var(--accent); color: var(--white); }
-.btn-primary:hover { background: #c0651c; }
-.btn-outline { border: 2px solid var(--white); color: var(--white); background: transparent; }
-.btn-outline:hover { background: var(--white); color: var(--text-dark); }
-.btn-block { width: 100%; }
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: #c0651c;
+}
+
+.btn-outline {
+  border: 2px solid var(--white);
+  color: var(--white);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--white);
+  color: var(--text-dark);
+}
+
+.btn-block {
+  width: 100%;
+}
 
 /* Sections */
-section { padding: 60px 0; }
+section {
+  padding: 60px 0;
+}
+
 .section-title {
   text-align: center;
   margin-bottom: 40px;
 }
-.section-title h2 { font-size: 2.2rem; color: var(--primary); }
-.section-title p { color: var(--text-muted); }
+
+.section-title h2 {
+  font-size: 2.2rem;
+  color: var(--primary);
+}
+
+.section-title p {
+  color: var(--text-muted);
+}
 
 /* Menu Controls */
 .menu-controls {
@@ -293,39 +371,112 @@ section { padding: 60px 0; }
   align-items: center;
   margin-bottom: 35px;
 }
+
 .search-box {
   position: relative;
   width: 100%;
-  max-width: 450px;
+  max-width: 600px;
 }
+
 .search-box input {
   width: 100%;
-  padding: 12px 16px 12px 42px;
-  border: 1px solid #ddd;
-  border-radius: 25px;
+  padding: 15px 20px 15px 52px;
+  border: 1px solid #ebdcd5;
+  border-radius: 30px;
   outline: none;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
+  box-shadow: 0 2px 8px rgba(92, 44, 22, 0.04);
+  transition: all 0.25s ease;
 }
+
+.search-box input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(92, 44, 22, 0.08);
+}
+
 .search-box i {
   position: absolute;
-  left: 15px;
+  left: 20px;
   top: 50%;
   transform: translateY(-50%);
   color: var(--text-muted);
+  font-size: 1.25rem;
 }
-.category-tabs { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.category-tabs {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
 .tab-btn {
-  padding: 8px 18px;
-  border: 1px solid #ddd;
+  padding: 13px 26px;
+  border: 1px solid #ebdcd5;
   background: var(--white);
-  border-radius: 20px;
+  border-radius: 30px;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(92, 44, 22, 0.04);
 }
+
+.tab-btn i {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  transition: color 0.25s ease;
+}
+
 .tab-btn.active {
   background: var(--primary);
   color: var(--white);
   border-color: var(--primary);
+  box-shadow: 0 6px 16px rgba(92, 44, 22, 0.18);
+}
+
+.tab-btn.active i {
+  color: var(--white);
+}
+
+.tab-btn:hover:not(.active) {
+  background-color: var(--bg-light);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1.5px);
+  box-shadow: 0 4px 8px rgba(92, 44, 22, 0.08);
+}
+
+.tab-btn:hover:not(.active) i {
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .category-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 8px 20px 16px 20px;
+    margin: 0 -20px;
+    width: calc(100% + 40px);
+    scrollbar-width: none;
+    /* Firefox */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .category-tabs::-webkit-scrollbar {
+    display: none;
+    /* Safari & Chrome */
+  }
+
+  .tab-btn {
+    flex-shrink: 0;
+  }
 }
 
 /* Menu Grid & Groups */
@@ -334,11 +485,13 @@ section { padding: 60px 0; }
   flex-direction: column;
   gap: 40px;
 }
+
 .menu-category-group {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .menu-category-title {
   font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
@@ -348,6 +501,7 @@ section { padding: 60px 0; }
   padding-bottom: 8px;
   border-bottom: 2px solid #ebdcd5;
 }
+
 .menu-category-title::after {
   content: '';
   position: absolute;
@@ -357,11 +511,13 @@ section { padding: 60px 0; }
   height: 2px;
   background-color: var(--accent);
 }
+
 .menu-category-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 25px;
 }
+
 .menu-card {
   background: var(--white);
   border-radius: var(--radius);
@@ -370,25 +526,48 @@ section { padding: 60px 0; }
   display: flex;
   flex-direction: column;
 }
+
+.menu-card.no-image {
+  border-top: 4px solid var(--primary);
+}
+
 .menu-card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
 }
+
 .card-body {
   padding: 18px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
-.card-body h3 { font-size: 1.15rem; margin-bottom: 6px; }
-.card-body p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px; flex-grow: 1; }
+
+.card-body h3 {
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+.card-body p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
 .card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.price { font-weight: 700; color: var(--primary); font-size: 1.1rem; }
+
+.price {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
 .add-btn {
   background: var(--bg-light);
   border: 1px solid var(--accent);
@@ -398,7 +577,11 @@ section { padding: 60px 0; }
   cursor: pointer;
   font-weight: 600;
 }
-.add-btn:hover { background: var(--accent); color: var(--white); }
+
+.add-btn:hover {
+  background: var(--accent);
+  color: var(--white);
+}
 
 /* Contact Section */
 .contact-grid {
@@ -406,6 +589,7 @@ section { padding: 60px 0; }
   grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
+
 .info-card {
   display: flex;
   gap: 15px;
@@ -415,7 +599,12 @@ section { padding: 60px 0; }
   margin-bottom: 15px;
   box-shadow: var(--shadow);
 }
-.info-card i { font-size: 1.5rem; color: var(--accent); }
+
+.info-card i {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
 .map-container {
   min-height: 320px;
   border-radius: var(--radius);
@@ -431,13 +620,17 @@ section { padding: 60px 0; }
   width: 350px;
   height: 100%;
   background: var(--white);
-  box-shadow: -5px 0 25px rgba(0,0,0,0.15);
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
   z-index: 200;
   transition: right 0.3s ease;
   display: flex;
   flex-direction: column;
 }
-.cart-drawer.open { right: 0; }
+
+.cart-drawer.open {
+  right: 0;
+}
+
 .cart-header {
   padding: 20px;
   border-bottom: 1px solid #eee;
@@ -445,8 +638,20 @@ section { padding: 60px 0; }
   justify-content: space-between;
   align-items: center;
 }
-.close-btn { background: none; border: none; font-size: 1.5rem; cursor: pointer; }
-.cart-body { padding: 20px; flex-grow: 1; overflow-y: auto; }
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.cart-body {
+  padding: 20px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
 .cart-item {
   display: flex;
   justify-content: space-between;
@@ -454,22 +659,52 @@ section { padding: 60px 0; }
   border-bottom: 1px dashed #eee;
   padding-bottom: 10px;
 }
-.cart-footer { padding: 20px; border-top: 1px solid #eee; }
-.total-price { display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 1.2rem; }
 
-footer { background: var(--text-dark); color: var(--white); padding: 20px 0; font-size: 0.9rem; }
+.cart-footer {
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+
+.total-price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+footer {
+  background: var(--text-dark);
+  color: var(--white);
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
 
 @media (max-width: 768px) {
-  .hero-content h1 { font-size: 2.2rem; }
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
   .slider-arrow {
     width: 40px;
     height: 40px;
     font-size: 1rem;
   }
-  .slider-arrow.prev { left: 10px; }
-  .slider-arrow.next { right: 10px; }
-  .contact-grid { grid-template-columns: 1fr; }
-  .nav-links { display: none; }
+
+  .slider-arrow.prev {
+    left: 10px;
+  }
+
+  .slider-arrow.next {
+    right: 10px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    display: none;
+  }
 }
 
 /* Özel Uyarı Modalı */
@@ -479,12 +714,14 @@ footer { background: var(--text-dark); color: var(--white); padding: 20px 0; fon
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(44, 34, 30, 0.6); /* Koyu kahverengi tonlu transparan arka plan */
+  background-color: rgba(44, 34, 30, 0.6);
+  /* Koyu kahverengi tonlu transparan arka plan */
   backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2000; /* Sepet panelinin de önünde olması için */
+  z-index: 2000;
+  /* Sepet panelinin de önünde olması için */
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
@@ -543,12 +780,19 @@ footer { background: var(--text-dark); color: var(--white); padding: 20px 0; fon
 }
 
 @keyframes modal-bounce {
-  0%, 20%, 50%, 80%, 100% {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-10px);
   }
+
   60% {
     transform: translateY(-5px);
   }
@@ -556,48 +800,42 @@ footer { background: var(--text-dark); color: var(--white); padding: 20px 0; fon
 
 /* --- Alerjen Sembolleri ve Bilgilendirme Kartı Stilleri --- */
 .allergen-legend-container {
-  background: var(--white);
-  border-radius: var(--radius);
-  padding: 20px 25px;
-  box-shadow: var(--shadow);
-  margin-bottom: 30px;
-  border-left: 4px solid var(--accent);
-  max-width: 100%;
-}
-.allergen-legend-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--primary);
-  margin-bottom: 8px;
   display: flex;
-  align-items: center;
-  gap: 10px;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  border-left: none;
 }
-.allergen-legend-title i {
-  color: var(--accent);
-}
-.allergen-legend-desc {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  margin-bottom: 15px;
-}
+
 .allergen-legend-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  justify-content: center;
+  gap: 10px;
 }
+
 .allergen-legend-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.85rem;
+  gap: 6px;
+  font-size: 0.8rem;
   font-weight: 600;
-  color: var(--text-dark);
-  background: var(--bg-light);
-  padding: 6px 12px;
+  color: var(--text-muted);
+  background: var(--white);
+  padding: 4px 10px;
   border-radius: 20px;
-  border: 1px solid rgba(92, 44, 22, 0.1);
+  border: 1px solid rgba(92, 44, 22, 0.08);
+  box-shadow: 0 1px 3px rgba(92, 44, 22, 0.02);
+}
+
+.allergen-legend-item .allergen-badge-icon {
+  width: 18px;
+  height: 18px;
+  font-size: 0.6rem;
 }
 
 /* Alerjen Rozetleri Ortak Stili */
@@ -614,24 +852,53 @@ footer { background: var(--text-dark); color: var(--white); padding: 20px 0; fon
 }
 
 /* Alerjen Grupları Renkleri */
-.allergen-badge-icon.gluten { background-color: #df9a57; }   /* Wheat color */
-.allergen-badge-icon.sut { background-color: #4299e1; }    /* Milk blue */
-.allergen-badge-icon.yumurta { background-color: #ecc94b; color: #2c221e; }      /* Egg yolk yellow */
-.allergen-badge-icon.kuruyemis { background-color: #48bb78; }     /* Seed green */
-.allergen-badge-icon.balik { background-color: #319795; }     /* Water teal */
-.allergen-badge-icon.susam { background-color: #a0aec0; }   /* Sesame gray-brown */
+.allergen-badge-icon.gluten {
+  background-color: #df9a57;
+}
+
+/* Wheat color */
+.allergen-badge-icon.sut {
+  background-color: #4299e1;
+}
+
+/* Milk blue */
+.allergen-badge-icon.yumurta {
+  background-color: #ecc94b;
+  color: #2c221e;
+}
+
+/* Egg yolk yellow */
+.allergen-badge-icon.kuruyemis {
+  background-color: #48bb78;
+}
+
+/* Seed green */
+.allergen-badge-icon.balik {
+  background-color: #319795;
+}
+
+/* Water teal */
+.allergen-badge-icon.susam {
+  background-color: #a0aec0;
+}
+
+/* Sesame gray-brown */
 
 /* Ürün Kartı Alerjen Bindirmesi */
 .menu-card {
-  position: relative; /* Badge konumlandırma için gerekli */
+  position: relative;
+  /* Badge konumlandırma için gerekli */
 }
+
 .card-allergens {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 6px;
-  margin-bottom: 8px; /* space between allergens and title */
+  margin-bottom: 8px;
+  /* space between allergens and title */
 }
+
 .card-allergens .allergen-badge-icon {
   width: 18px;
   height: 18px;
@@ -640,9 +907,11 @@ footer { background: var(--text-dark); color: var(--white); padding: 20px 0; fon
   cursor: help;
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
 .card-allergens .allergen-badge-icon:hover {
   transform: scale(1.2);
 }
+
 .kcal-badge {
   font-size: 0.75rem;
   font-weight: 600;
@@ -654,6 +923,7 @@ footer { background: var(--text-dark); color: var(--white); padding: 20px 0; fon
   align-items: center;
   gap: 4px;
 }
+
 .kcal-badge i {
   color: var(--accent);
   font-size: 0.7rem;
