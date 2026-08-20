@@ -69,14 +69,14 @@ const menuItems = [
   { id: 62, category: 'tatli', name: 'Fıstıklı Cheesecake', price: 290, desc: 'Antep fıstıklı cheesecake. (390 kcal)', img: 'photos/fıstıklıcheesecake.png', allergens: ['gluten', 'sut', 'yumurta', 'kuruyemis'] },
   { id: 63, category: 'tatli', name: 'Fıstıklı Krokanlı Pasta', price: 315, desc: 'Fıstık ve çıtır krokan parçalı pasta. (322 kcal)', img: 'photos/fıstıklıkrokanlı.png', allergens: ['gluten', 'sut', 'yumurta', 'kuruyemis'] },
   { id: 64, category: 'tatli', name: 'Muzlu Show Pasta', price: 335, desc: 'Hafif krema dolgulu muzlu pasta. (421 kcal)', img: 'photos/muzlupasta.png', allergens: ['gluten', 'sut', 'yumurta'] },
-  { id: 65, category: 'tatli', name: 'Fıstıklı Çikolatalı Show Pasta', price: 335, desc: 'Çikolata ve Antep fıstıklı pasta. (421 kcal)', img: 'photos/muzlupasta.png', allergens: ['gluten', 'sut', 'yumurta'] },
+  { id: 65, category: 'tatli', name: 'Fıstıklı Çikolatalı Show Pasta', price: 335, desc: 'Çikolata ve Antep fıstıklı pasta. (421 kcal)', img: 'photos/cikolatalıshow.png', allergens: ['gluten', 'sut', 'yumurta'] },
   { id: 66, category: 'tatli', name: 'San Sebastian', price: 320, desc: 'Lezzetli İspanyol cheesecake. (420 kcal)', img: 'photos/San Sebastian Dilimlow.jpg', allergens: ['sut', 'yumurta'] },
-  { id: 67, category: 'tatli', name: 'Tiramisu', price: 300, desc: 'Kahveli İtalyan tatlısı. (421 kcal)', img: 'photos/muzlupasta.png', allergens: ['gluten', 'sut', 'yumurta'] },
-  { id: 68, category: 'tatli', name: 'Aslı Cookie', price: 140, desc: 'Esmer şeker ve parça çikolatalı ev yapımı kurabiye. (441 kcal)', img: 'photos/kurabiye.png', allergens: ['gluten', 'sut', 'yumurta'] },
+  { id: 67, category: 'tatli', name: 'Tiramisu', price: 300, desc: 'Kahveli İtalyan tatlısı. (421 kcal)', img: 'photos/tiramisudilim.png', allergens: ['gluten', 'sut', 'yumurta'] },
+  { id: 68, category: 'tatli', name: 'Aslı Cookie', price: 140, desc: 'Esmer şeker ve parça çikolatalı ev yapımı kurabiye. (441 kcal)', img: 'photos/cookie.png', allergens: ['gluten', 'sut', 'yumurta'] },
   { id: 69, category: 'tatli', name: 'Kurabiye Tabağı', price: 260, desc: 'Elmalı, tahinli, cazibe, ballı cevizli, kavala. (340 kcal)', img: 'photos/kurabiye.png', allergens: ['gluten', 'sut', 'yumurta'] },
   { id: 70, category: 'tatli', name: 'Kurabiye (Adet)', price: 60, desc: 'Elmalı, tahinli, cazibe, ballı cevizli, kavala. (441 kcal)', img: 'photos/kurabiye.png', allergens: ['gluten', 'sut', 'yumurta'] },
-  { id: 71, category: 'tatli', name: 'Dondurma (Porsiyon)', price: 300, desc: '4 top dondurma.', img: 'photos/muzlupasta.png', allergens: ['gluten', 'sut', 'yumurta'] },
-  { id: 72, category: 'tatli', name: 'Dondurma (Top)', price: 75, desc: 'Vanilyalı, çikolatalı, çilekli, italyan karamel, bal badem, karamel, limonlu.', img: 'photos/muzlupasta.png', allergens: ['gluten', 'sut', 'yumurta'] },
+  { id: 71, category: 'tatli', name: 'Dondurma (Porsiyon)', price: 300, desc: '4 top dondurma.', img: 'photos/dondurma.png', allergens: ['gluten', 'sut', 'yumurta'] },
+  { id: 72, category: 'tatli', name: 'Dondurma (Top)', price: 75, desc: 'Vanilyalı, çikolatalı, çilekli, italyan karamel, bal badem, karamel, limonlu.', img: 'photos/dondurma.png', allergens: ['gluten', 'sut', 'yumurta'] },
 
 
 
