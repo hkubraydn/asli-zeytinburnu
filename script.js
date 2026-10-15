@@ -116,7 +116,20 @@ const menuItems = [
   { id: 105, category: 'soft-icecek', name: 'Meysu Portakal', price: 90, desc: 'Portakal aromalı soğuk gazlı içecek. (168 kcal)', img: '', allergens: [] },
   { id: 106, category: 'soft-icecek', name: 'Churchill', price: 85, desc: 'Limon suyu, soda ve tuz karışımı ferahlatıcı içecek. (40 kcal)', img: '', allergens: [] },
   { id: 107, category: 'soft-icecek', name: 'Sade Soda', price: 65, desc: 'Doğal mineralli sade maden suyu. (0 kcal)', img: '', allergens: [] },
-  { id: 108, category: 'soft-icecek', name: 'Su', price: 35, desc: 'Şişe içme suyu. (0 kcal)', img: '', allergens: [] }
+  { id: 108, category: 'soft-icecek', name: 'Su', price: 35, desc: 'Şişe içme suyu. (0 kcal)', img: '', allergens: [] },
+
+  { id: 109, category: 'kiloluk-urunler', name: 'Peynirli Su Böreği (Kg)', price: 960, desc: 'Kilogram fiyatıdır.', img: 'photos/suboregikilo.webp', allergens: ['gluten', 'sut', 'yumurta'] },
+  { id: 110, category: 'kiloluk-urunler', name: 'Kıymalı Kol Böreği (Kg)', price: 1040, desc: 'Kilogram fiyatıdır.', img: 'photos/kolboregikiymali.webp', allergens: ['gluten', 'yumurta'] },
+  { id: 111, category: 'kiloluk-urunler', name: 'Patatesli Boşnak Böreği (Kg)', price: 960, desc: 'Kilogram fiyatıdır.', img: 'photos/bosnak.webp', allergens: ['gluten', 'yumurta'] },
+  { id: 112, category: 'kiloluk-urunler', name: 'Kıymalı Boşnak Böreği (Kg)', price: 1200, desc: 'Kilogram fiyatıdır.', img: 'photos/bosnak.webp', allergens: ['gluten', 'yumurta'] },
+  { id: 113, category: 'kiloluk-urunler', name: 'Tuzlu Kurabiye (Kg)', price: 1100, desc: 'Kilogram fiyatıdır.', img: 'photos/tuzlukurabiye.webp', allergens: ['gluten', 'sut', 'yumurta'] },
+  { id: 114, category: 'kiloluk-urunler', name: 'Tatlı Kurabiye (Kg)', price: 1100, desc: 'Kilogram fiyatıdır.', img: 'photos/tatlikurabiye.webp', allergens: ['gluten', 'sut', 'yumurta'] },
+  { id: 115, category: 'kiloluk-urunler', name: 'Fıstıklı Baklava (Kg)', price: 1300, desc: 'Kilogram fiyatıdır.', img: 'photos/fistiklikilo.webp', allergens: ['gluten', 'sut', 'kuruyemis'] },
+  { id: 116, category: 'kiloluk-urunler', name: 'Cevizli Ev Baklavası (Kg)', price: 1050, desc: 'Kilogram fiyatıdır.', img: 'photos/cevizlievkilo.webp', allergens: ['gluten', 'sut', 'kuruyemis'] },
+  { id: 117, category: 'kiloluk-urunler', name: 'Profiterol (Kg)', price: 1750, desc: 'Kilogram fiyatıdır.', img: 'photos/profiterol_porsiyon.webp', allergens: ['gluten', 'sut', 'yumurta'] },
+
+  { id: 118, category: 'paket-urunler', name: 'Zeytinyağlı Yaprak Sarma', price: 790, desc: '600 gramlık kutu fiyatıdır.', img: 'photos/sarmakutu.webp', allergens: ['gluten', 'kuruyemis'] },
+  { id: 119, category: 'paket-urunler', name: 'Mantı', price: 790, desc: '500 gramlık kutu fiyatıdır.', img: 'photos/manti.webp', allergens: ['gluten', 'sut', 'yumurta'] },
 ];
 let cart = [];
 let activeCategory = 'all';
@@ -169,7 +182,7 @@ function renderMenu(items) {
   }
 
   // Kategori sıralaması ve Türkçe adları
-  const categoryOrder = ['kahvalti', 'borek', 'atistirmalik', 'ana-yemek', 'tatli', 'sicak-icecek', 'soguk-icecek', 'soft-icecek'];
+  const categoryOrder = ['kahvalti', 'borek', 'atistirmalik', 'ana-yemek', 'tatli', 'sicak-icecek', 'soguk-icecek', 'soft-icecek', 'kiloluk-urunler', 'paket-urunler'];
   const categoryNames = {
     'kahvalti': 'Kahvaltı & Yumurta',
     'borek': 'Börek & Tost',
@@ -178,7 +191,9 @@ function renderMenu(items) {
     'tatli': 'Tatlılar',
     'sicak-icecek': 'Sıcak İçecekler',
     'soguk-icecek': 'Soğuk İçecekler',
-    'soft-icecek': 'Soft İçecekler'
+    'soft-icecek': 'Soft İçecekler',
+    'kiloluk-urunler': 'Kiloluk Ürünler',
+    'paket-urunler': 'Paket Ürünler'
   };
 
   // Ürünleri kategorilerine göre grupla
@@ -208,7 +223,7 @@ function renderMenu(items) {
       catItems.forEach(item => {
         const isBeverage = ['sicak-icecek', 'soguk-icecek', 'soft-icecek'].includes(item.category);
         const card = document.createElement('div');
-        card.className = `menu-card${isBeverage ? ' no-image' : ''}`;
+        card.className = `menu-card${isBeverage ? ' no-image' : ''}${item.category === 'kiloluk-urunler' ? ' kiloluk-card' : ''}${item.category === 'paket-urunler' ? ' paket-card' : ''}`;
 
         let descText = item.desc;
         let kcalHtml = '';
